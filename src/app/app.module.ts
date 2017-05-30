@@ -6,6 +6,7 @@ import { RouterModule }   from '@angular/router';
 import { HeroService } from './hero.service';
 
 import { AppComponent }  from './app.component';
+import { DashboardComponent }  from './dashboard.component';
 import { HeroesComponent }  from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 
@@ -17,11 +18,16 @@ import { HeroDetailComponent } from './hero-detail.component';
       {
         path: 'heroes',
         component: HeroesComponent
-      }
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
     ])
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeroesComponent,
     HeroDetailComponent
   ],
