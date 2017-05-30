@@ -1,6 +1,8 @@
 
 import { Component } from '@angular/core';
+
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-app',
@@ -64,12 +66,15 @@ import { Hero } from './hero';
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `]
+  `],
+  providers: [HeroService]
 })
 export class AppComponent  {
   title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
+
+  constructor(private heroService: HeroService) { }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
