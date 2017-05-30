@@ -21,6 +21,10 @@ import { HeroDetailComponent } from './hero-detail.component';
         pathMatch: 'full'
       },
       {
+        path: 'detail/:id',
+        component: HeroDetailComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       },
